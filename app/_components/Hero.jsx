@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import Image from "next/image";
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 function Hero() {
   return (
     <div>
@@ -56,13 +58,15 @@ function Hero() {
           </p>
           <hr></hr>{" "}
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button
-              variant="secondary"
-              className="w-full border border-white md:w-1/3"
-            >
-              <FaGoogle className=" mr-2" />
-              Sign Up with Google
-            </Button>
+            <RegisterLink>
+              <Button
+                variant="secondary"
+                className="w-full border border-white md:w-1/3"
+              >
+                <FaGoogle className=" mr-2" />
+                Sign Up with Google
+              </Button>
+            </RegisterLink>
             <Button
               variant="secondary"
               className="w-full border border-white md:w-1/3"

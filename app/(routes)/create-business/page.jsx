@@ -8,6 +8,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast } from "sonner";
+
+
 function CreateBusiness() {
   const [businessName, setBusinessName] = useState();
   const [description, setDescription] = useState();
