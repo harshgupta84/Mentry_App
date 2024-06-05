@@ -5,18 +5,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { FaMale, FaUser } from "react-icons/fa";
 
 function SideNavBar() {
   const menu = [
     {
       id: 1,
-      name: "Meeting Type",
+      name: "Mentorship Type",
       path: "/dashboard/meeting-type",
       icon: Briefcase,
     },
     {
       id: 2,
-      name: "Scheduled Meeting",
+      name: "Scheduled Sessions",
       path: "/dashboard/scheduled-meeting",
       icon: Calendar,
     },
@@ -28,9 +29,9 @@ function SideNavBar() {
     },
     {
       id: 4,
-      name: "Settings",
-      path: "/dashboard/settings",
-      icon: Settings,
+      name: "Profile",
+      path: "/dashboard/profile",
+      icon: FaUser,
     },
   ];
 
@@ -66,7 +67,9 @@ function SideNavBar() {
                        
                         font-normal
                         text-md
-                        ${activePath == item.path && "text-primary bg-blue-100"}
+                        ${
+                          activePath == item.path && "text-primary bg-slate-500"
+                        }
                         `}
             >
               <item.icon /> {item.name}

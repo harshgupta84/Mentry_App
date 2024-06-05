@@ -9,7 +9,6 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast } from "sonner";
 
-
 function CreateBusiness() {
   const [businessName, setBusinessName] = useState();
   const [description, setDescription] = useState();
@@ -17,7 +16,6 @@ function CreateBusiness() {
   const { user } = useKindeBrowserClient();
   const router = useRouter();
   const onCreateBusiness = async () => {
-    console.log("btn Click", businessName);
     await setDoc(doc(db, "Business", user.email), {
       businessName: businessName.replace(" ", "_"),
       email: user.email,
@@ -39,9 +37,9 @@ function CreateBusiness() {
           You can always change this later from settings
         </p>
         <div className="w-full">
-          <label className="text-slate-400">Working as</label>
+          <label className="text-slate-400">Your Name</label>
           <Input
-            placeholder="Ex: ABC Company"
+            placeholder="Ex: Alex Doe"
             className="mt-2"
             onChange={(event) => setBusinessName(event.target.value)}
           />

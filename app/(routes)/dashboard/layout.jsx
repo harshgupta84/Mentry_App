@@ -8,7 +8,10 @@ function layout({ children }) {
       <div className="hidden md:block md:w-64 h-screen fixed border border-white">
         <SideNavBar />
       </div>
-      <div className="md:ml-72"><DashboardHeader/>{children}</div>
+      <div className="md:ml-72">
+        <DashboardHeader />
+        {children}
+      </div>
     </div>
   );
 }

@@ -23,11 +23,13 @@ export const Email = ({
   date,
   meetingUrl,
   businessName,
+  description,
 }) => {
+  console.log(description);
   return (
     <Html>
       <Head />
-      <Preview>Yelp recent login</Preview>
+      <Preview>Mnetry</Preview>
       <Body style={main}>
         <Container>
           <Section style={logo}>
@@ -35,15 +37,7 @@ export const Email = ({
           </Section>
 
           <Section style={content}>
-            <Row>
-              <Img
-                style={image}
-                width={620}
-                src={
-                  "https://yt3.googleusercontent.com/LtM9aKdQGsx4SyoAvnBSOxxoTXlqgUUr9iQJveGRmrzMIdjONEToRJ6mT6ysmKog9AaKast3IGY=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
-                }
-              />
-            </Row>
+            <Row></Row>
 
             <Row style={{ ...boxInfos, paddingBottom: "0" }}>
               <Column>
@@ -64,15 +58,17 @@ export const Email = ({
                     textAlign: "center",
                   }}
                 >
-                  Thank you for scheduling Meeting with {businessName},
+                  Thank you for scheduling Mentorship Session with{" "}
+                  {businessName},
                 </Heading>
-                <Text>Please find the meeting details:</Text>
+                <Text style={paragraph}>{description}</Text>
+                <Text>Please find the session details:</Text>
                 <Text style={paragraph}>
                   <b>Time: </b>
                   {meetingTime}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>date: </b>
+                  <b>Date: </b>
                   {date}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
@@ -80,7 +76,7 @@ export const Email = ({
                   {meetingUrl}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>duration: </b>
+                  <b>Duration: </b>
                   {duration}
                 </Text>
                 <Text
@@ -90,7 +86,7 @@ export const Email = ({
                     marginTop: -5,
                   }}
                 >
-                  *Please Join meeting on above details
+                  *Please Join Session on above details
                   {meetingUrl}
                 </Text>
               </Column>
@@ -102,15 +98,7 @@ export const Email = ({
             </Row>
           </Section>
 
-          <Section style={containerImageFooter}>
-            <Img
-              style={image}
-              width={620}
-              src={
-                "https://yt3.googleusercontent.com/LtM9aKdQGsx4SyoAvnBSOxxoTXlqgUUr9iQJveGRmrzMIdjONEToRJ6mT6ysmKog9AaKast3IGY=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
-              }
-            />
-          </Section>
+          <Section style={containerImageFooter}></Section>
 
           <Text
             style={{
@@ -119,8 +107,7 @@ export const Email = ({
               color: "rgb(0,0,0, 0.7)",
             }}
           >
-            © 2022 | Yelp Inc., 350 Mission Street, San Francisco, CA 94105,
-            U.S.A. | www.yelp.com
+            © 2024 | Mentry, Mathura IND | www.mentry.com
           </Text>
         </Container>
       </Body>

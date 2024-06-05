@@ -89,6 +89,7 @@ function MeetingTimeDateSelection({ eventInfo, businessInfo }) {
     await setDoc(doc(db, "ScheduledMeetings", docId), {
       businessName: businessInfo.businessName,
       businessEmail: businessInfo.email,
+      description:businessInfo.description,
       selectedTime: selectedTime,
       selectedDate: date,
       formatedDate: format(date, "PPP"),
@@ -125,7 +126,7 @@ function MeetingTimeDateSelection({ eventInfo, businessInfo }) {
     plunk.emails
       .send({
         to: userEmail,
-        subject: "Meeting Schedul Details",
+        subject: "Session Schedule Details",
         body: emailHtml,
       })
       .then((resp) => {
