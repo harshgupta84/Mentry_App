@@ -47,6 +47,7 @@ function Availability() {
   useEffect(() => {
     user && getBusinessInfo();
   }, [user]);
+
   const getBusinessInfo = async () => {
     const docRef = doc(db, "Business", user.email);
     const docSnap = await getDoc(docRef);

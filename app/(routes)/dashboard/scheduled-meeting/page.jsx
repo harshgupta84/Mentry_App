@@ -64,7 +64,7 @@ function ScheduledMeeting() {
           <TabsTrigger value="expired">Expired</TabsTrigger>
         </TabsList>
         <TabsContent value="upcoming">
-          <ScheduledMeetingList meetingList={filterMeetingList("upcoming")} />{" "}
+          <ScheduledMeetingList meetingList={filterMeetingList("upcoming")} />
         </TabsContent>
         <TabsContent value="expired">
           <ScheduledMeetingList meetingList={filterMeetingList("expired")} />

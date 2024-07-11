@@ -15,6 +15,7 @@ function CreateBusiness() {
   const db = getFirestore(app);
   const { user } = useKindeBrowserClient();
   const router = useRouter();
+
   const onCreateBusiness = async () => {
     await setDoc(doc(db, "Business", user.email), {
       businessName: businessName.replace(" ", "_"),
@@ -28,6 +29,7 @@ function CreateBusiness() {
       router.replace("/dashboard");
     });
   };
+
   return (
     <div className="p-14 items-center flex flex-col gap-20 my-10">
       <Image src="/logo.svg" width={200} height={200} />

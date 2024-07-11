@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   LogoutLink,
   useKindeBrowserClient,
@@ -14,6 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 function DashboardHeader() {
   const { user } = useKindeBrowserClient();
@@ -36,7 +37,10 @@ function DashboardHeader() {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
+
+              <Link href="/profile">
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>Settings</DropdownMenuItem>
 
               <DropdownMenuItem>
