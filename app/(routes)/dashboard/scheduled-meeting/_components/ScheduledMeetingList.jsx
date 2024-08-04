@@ -22,15 +22,15 @@ function ScheduledMeetingList({ meetingList }) {
                   <div className="mt-5 flex flex-col gap-4">
                     <h2 className="flex gap-2">
                       <Clock />
-                      {meeting?.duration} Min{" "}
+                      {meeting?.duration} Min
                     </h2>
                     <h2 className="flex gap-2">
-                      <CalendarCheck />
-                      {meeting.formatedDate}{" "}
+                      <CalendarCheck/>
+                      {meeting.formatedDate}
                     </h2>
                     <h2 className="flex gap-2">
-                      <Timer />
-                      {meeting.selectedTime}{" "}
+                      <Timer/>
+                      {meeting.selectedTime}
                     </h2>
 
                     <Link
@@ -40,8 +40,10 @@ function ScheduledMeetingList({ meetingList }) {
                       {meeting?.locationUrl}
                     </Link>
                   </div>
-                  <Link href={meeting?.locationUrl}>
-                    <Button className="mt-5">Join Now</Button>
+                  <Link>
+                    <Button className="mt-5" href={meeting?.locationUrl}>
+                      Join Now
+                    </Button>
                   </Link>
                 </div>
               </AccordionContent>
@@ -50,6 +52,6 @@ function ScheduledMeetingList({ meetingList }) {
         ))}
     </div>
   );
-}
+};
 
 export default ScheduledMeetingList;

@@ -29,7 +29,7 @@ export const Email = ({
   return (
     <Html>
       <Head />
-      <Preview>Mnetry</Preview>
+      <Preview>Mentry</Preview>
       <Body style={main}>
         <Container>
           <Section style={logo}>
@@ -72,12 +72,12 @@ export const Email = ({
                   {date}
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Location: </b>
-                  {meetingUrl}
+                  <b>Link: </b>
+                  <a>{meetingUrl}</a>
                 </Text>
                 <Text style={{ ...paragraph, marginTop: -5 }}>
                   <b>Duration: </b>
-                  {duration}
+                  {duration} Minutes
                 </Text>
                 <Text
                   style={{
@@ -86,14 +86,16 @@ export const Email = ({
                     marginTop: -5,
                   }}
                 >
-                  *Please Join Session on above details
+                  *Please Join Session on above details only
                   {meetingUrl}
                 </Text>
               </Column>
             </Row>
             <Row style={{ ...boxInfos, paddingTop: "0" }}>
               <Column style={containerButton} colSpan={2}>
-                <Button style={button}>Join Now</Button>
+                <Button style={button} href={meetingUrl}>
+                  Join Now
+                </Button>
               </Column>
             </Row>
           </Section>
