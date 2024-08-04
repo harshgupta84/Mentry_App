@@ -74,23 +74,25 @@ function Profile() {
   }
 
   return (
-    <div className="max-w-md mx-auto my-10 p-6 gap-6 bg-gray-800 rounded-lg shadow-md text-center text-white">
-    <img
-      src={user.picture}
-      alt="Profile"
-      className="w-32 h-32 rounded-full mx-auto mb-4"
-    />
-    <h1 className="text-2xl font-semibold text-blue-400">{`${user.given_name} ${user.family_name}`}</h1>
-    <p className="text-gray-300">
-      <strong>Email:</strong> {user.email}
-    </p>
-    <p className="text-gray-300">
-      <strong>Role:</strong> {(data && data.businessName) || "N/A"}
-    </p>
-    <p className="text-gray-300">
-      <strong>Description:</strong> {(data && data.description) || "N/A"}
-    </p>
-  </div>
+    <div className="max-w-md mx-auto my-10 p-8 gap-6 bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg shadow-lg text-center text-white">
+      <div className="flex justify-center mb-4">
+        <img
+          src={user.picture}
+          alt="Profile"
+          className="w-32 h-32 rounded-full border-4 border-blue-400"
+        />
+      </div>
+      <h1 className="text-3xl font-bold text-blue-400 mb-2">{`${user.given_name} ${user.family_name}`}</h1>
+      <p className="text-gray-300 mb-4">
+        <strong>Email:</strong> {user.email}
+      </p>
+      <p className="text-gray-300 mb-4">
+        <strong>Role:</strong> {(data && data.businessName) || "N/A"}
+      </p>
+      <p className="text-gray-300">
+        <strong>Description:</strong> {(data && data.description) || "N/A"}
+      </p>
+    </div>
   );
 }
 
