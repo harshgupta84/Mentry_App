@@ -32,7 +32,9 @@ function CreateBusiness() {
 
   return (
     <div className="p-14 items-center flex flex-col gap-20 my-10">
-      <Image src="/logo.svg" width={200} height={200} />
+      <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-5xl">
+        Mentry
+      </h1>
       <div className="flex flex-col items-center gap-4 max-w-3xl">
         <h2 className="text-4xl font-bold">Let Us Know Something About You</h2>
         <p className="text-slate-500">

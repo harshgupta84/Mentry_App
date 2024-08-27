@@ -155,7 +155,9 @@ function MeetingTimeDateSelection({ eventInfo, businessInfo }) {
       className="p-5 py-10 shadow-lg m-5 border-t-8 mx-10 md:mx-26 lg:mx-56 my-10"
       style={{ borderTopColor: eventInfo?.themeColor }}
     >
-      <Image src="/logo.svg" alt="logo" width={150} height={150} />
+      <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-5xl">
+        Mentry
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
         <div className="p-4 border-r">
           <h2>{businessInfo?.businessName}</h2>

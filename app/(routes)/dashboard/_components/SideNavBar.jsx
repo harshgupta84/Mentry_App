@@ -44,7 +44,9 @@ function SideNavBar() {
   return (
     <div className="p-5 py-14">
       <div className="flex justify-center">
-        <Image src="/logo.svg" width={150} height={150} alt="logo" />
+        <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-5xl">
+          Mentry
+        </h1>
       </div>
 
       <Link href={"/create-meeting"}>
